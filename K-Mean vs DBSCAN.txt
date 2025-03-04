@@ -1,0 +1,30 @@
+Comparison: K-Means vs. DBSCAN
+K-Means Clustering:
+Assumptions & Requirements:
+Requires you to specify the number of clusters (K) in advance.
+Best suited for spherical (globular) clusters.
+Sensitive to outliers since it minimizes the sum-of-squares error.
+Advantages:
+Speed and Scalability: Works efficiently on large datasets.
+Simplicity: Conceptually simple and easy to implement.
+When It Performs Better:
+When clusters are well-separated and roughly equal in size.
+When you have little to no noise in the data.
+DBSCAN Clustering:
+Assumptions & Requirements:
+Does not require specifying the number of clusters upfront.
+Groups points based on density; clusters can be arbitrarily shaped.
+Automatically identifies outliers as noise (labelled as -1).
+Advantages:
+Flexibility: Handles clusters of various shapes and sizes.
+Robustness to Noise: Outliers are naturally excluded from clusters.
+When It Performs Better:
+When the data has clusters with irregular shapes or non-globular patterns.
+In scenarios where noise and outliers are significant.
+Considerations:
+The performance of DBSCAN heavily depends on choosing the right eps (radius) and min_samples parameters.
+It can struggle with datasets where the density varies significantly among clusters.
+Summary
+K-Means is typically a good choice when you know the approximate number of clusters, the clusters are spherical, and you need a fast, scalable method.
+DBSCAN is preferable when you expect clusters of arbitrary shape, when your data contains noise or outliers, or when you are unsure about the number of clusters.
+By implementing both methods, you can compare their results visually (and quantitatively, using metrics like silhouette score) to decide which clustering method best suits your customer segmentation needs.
